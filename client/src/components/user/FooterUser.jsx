@@ -1,7 +1,13 @@
 import React from 'react'
 import {Footer} from 'flowbite-react'
 import Logo from '../common/Logo'
+import { Link } from "react-router-dom";
+import '../../pages/user/test.css'
 
+
+const footerstyle = {
+    margin : '20px'
+}
 function FooterUser() {
     return (
         <Footer container={true}>
@@ -15,19 +21,22 @@ function FooterUser() {
                     /> */}
                     <Logo size={1.5} />
 
-                    <Footer.LinkGroup>
-                        <Footer.Link href="#">
+                    <Footer.LinkGroup style={footerstyle}>
+                        <Link className='footer-link' to="/">
                             About
-                        </Footer.Link>
-                        <Footer.Link href="#">
+                        </Link>
+                        <Link className='footer-link' to="/Privacy">
                             Privacy Policy
-                        </Footer.Link>
-                        <Footer.Link href="#">
-                            Licensing
-                        </Footer.Link>
-                        <Footer.Link href="#">
+                        </Link>
+                        <Link className='footer-link' to="/terms">
+                            Terms and Conditions
+                        </Link>
+                        <Link className='footer-link' to="/refund">
+                            Refund Policy
+                        </Link>
+                        <Link className='footer-link' to="/contact">
                             Contact
-                        </Footer.Link>
+                        </Link>
                     </Footer.LinkGroup>
                 </div>
                 <Footer.Divider />

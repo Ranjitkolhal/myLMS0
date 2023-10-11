@@ -13,6 +13,10 @@ import Course from '../pages/user/Course'
 import Enrolled from '../pages/user/Enrolled'
 import ViewCourse from '../pages/user/ViewCourse'
 import Profile from '../pages/user/Profile'
+import Contact from '../pages/user/Contact'
+import Privacy from '../pages/user/privacy'
+import Terms from '../pages/user/terms'
+import Refund from '../pages/user/Refund'
 import CourseOwned from '../pages/user/CourseOwned'
 import ViewTransactions from '../pages/user/ViewTransactions'
 import { setUser } from '../features/userSlice'
@@ -49,6 +53,10 @@ function UserRoutes() {
         <Route path='signin' element={<SignIn />} />
         <Route path='signup' element={<SignUp />} />
         <Route path='courses/:id' element={<Course />} />
+        <Route path='contact' element={<Contact />} />
+        <Route path='privacy' element={<Privacy />} />
+        <Route path='terms' element={<Terms />} />
+        <Route path='refund' element={<Refund />} />
 
         <Route element={<UserPrivate />}>
           <Route path='user/profile' element={<Profile />} />
